@@ -16,3 +16,4 @@ use App\Http\Controllers\NavController;
 
 Route::get('/', [NavController::class, 'home']);
 Route::get('/list', [NavController::class, 'list']);
+Route::get('/book/{id}', [NavController::class, 'book']);

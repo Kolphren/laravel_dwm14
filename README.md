@@ -13,3 +13,5 @@ Créer un Controller : NavController
 - Ajouter une nouvele page avec un formulaire. Ce formulaire demande votre age. => Formulaire Blade
 - Quand on valide le formulaire, on arrive de nouveau sur une vounelle page, qui affiche 'Tu as [age] ans !'
 
+### Exo 4
+

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Book;
 
 class NavController extends Controller
 {
@@ -13,6 +14,13 @@ class NavController extends Controller
 
     public function list()
     {
-        return view('list');
+        $books = Book::all();
+        return view('list', ['books' => $books]);
+    }
+
+    public function book($id)
+    {
+        $book = Book::getOne($id);
+        return view('book', ['book' => $book]);
     }
 }

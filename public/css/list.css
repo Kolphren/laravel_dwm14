@@ -3,4 +3,9 @@
     background-color: #17071491;
     padding: 20px;
     border-radius: 60px;
+    margin: 50px;
+}
+
+.list {
+    width: 90%;
 }
