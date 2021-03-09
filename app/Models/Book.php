@@ -10,4 +10,5 @@ class Book extends Model
     {
         return Book::find($id);
     }
+
 }

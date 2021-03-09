@@ -24,7 +24,7 @@
                         <a class="nav-link" href="/list">Liste</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Ajout</a>
+                        <a class="nav-link" href="/add">Ajout</a>
                     </li>
                 </ul>
             </div>

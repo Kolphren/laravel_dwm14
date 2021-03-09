@@ -23,4 +23,15 @@ class NavController extends Controller
         $book = Book::getOne($id);
         return view('book', ['book' => $book]);
     }
+
+    public function add()
+    {
+        return view('add');
+    }
+
+    public function updateBook($id)
+    {
+        $book = Book::find($id);
+        return view('update', ['book' => $book]);
+    }
 }

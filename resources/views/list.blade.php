@@ -14,6 +14,8 @@
                     <th scope="col">Titre</th>
                     <th scope="col">Auteur</th>
                     <th scope="col">Genre</th>
+                    <th scope="col">MAJ</th>
+                    <th scope="col">Supp</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +25,14 @@
                     <td><a href="/book/{{ $book->id }}">{{ $book->title }}</a></td>
                     <td>{{ $book->author }}</td>
                     <td>{{ $book->genre }}</td>
+                    <td><a class="btn btn-info" href="/updateBook/{{ $book->id }}">U</a></td>
+                    <td>
+                        <form action="/deleteBook" method="POST">
+                            @csrf
+                            <input type="hidden" name="id" value="{{ $book->id }}">
+                            <input type="submit" class="btn btn-danger" value="X">
+                        </form>
+                    </td>
                 </tr>
             @endforeach
             </tbody>
