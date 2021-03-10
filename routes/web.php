@@ -17,7 +17,6 @@ use App\Http\Controllers\AuthorController;
 |
 */
 
-Route::resource('authors', AuthorController::class);
 
 Route::get('/', [NavController::class, 'home']);
 Route::get('/list', [NavController::class, 'list']);

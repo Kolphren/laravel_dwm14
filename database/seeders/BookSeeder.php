@@ -16,28 +16,28 @@ class BookSeeder extends Seeder
     {
         DB::table('books')->insert([
             [
-            'title' => 'Everworld',
-            'author' => 'Truc',
-            'description' => 'Un monde trop bizarre',
-            'publication_year' => '2000',
-            'genre' => 'Fantastique',
-            'pages_nb' => '400'
+                'title' => 'Disque-monde',
+                'author_id' => 3,
+                'description' => 'Un monde trop bizarre',
+                'publication_year' => 2000,
+                'genre' => 'Fantastique',
+                'pages_nb' => 400
             ],
             [
                 'title' => 'Epée de vérité',
-                'author' => 'Truc',
+                'author_id' => 1,
                 'description' => 'Un monde trop bizarre',
                 'publication_year' => '2000',
                 'genre' => 'Fantastique',
-                'pages_nb' => '400'
+                'pages_nb' => 400
             ],
             [
                 'title' => 'LOTR',
-                'author' => 'Truc',
+                'author_id' => 2,
                 'description' => 'Un monde trop bizarre',
-                'publication_year' => '2000',
+                'publication_year' => 2000,
                 'genre' => 'Fantastique',
-                'pages_nb' => '400'
+                'pages_nb' => 400
             ],
         ]);
     }

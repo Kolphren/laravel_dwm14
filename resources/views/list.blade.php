@@ -23,7 +23,7 @@
                 <tr>
                     <th scope="row">{{ $book->id }}</th>
                     <td><a href="/book/{{ $book->id }}">{{ $book->title }}</a></td>
-                    <td>{{ $book->author }}</td>
+                    <td>{{ $book->author->name }}</td>
                     <td>{{ $book->genre }}</td>
                     <td><a class="btn btn-info" href="/updateBook/{{ $book->id }}">U</a></td>
                     <td>

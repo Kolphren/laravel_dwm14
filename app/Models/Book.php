@@ -11,4 +11,8 @@ class Book extends Model
         return Book::find($id);
     }
 
+    public function author()
+    {
+        return $this->belongsTo(Author::class);
+    }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Book;
+use App\Models\Author;
 
 class BookController extends Controller
 {
@@ -11,7 +12,7 @@ class BookController extends Controller
     {
         $book = new Book;
         $book->title = $request->title;
-        $book->author = $request->author;
+        $book->author_id = $request->author_id;
         $book->description = $request->description;
         $book->pages_nb = $request->pages_nb;
         $book->genre = $request->genre;
@@ -38,4 +39,5 @@ class BookController extends Controller
         $book->save();
         return redirect('/list');
     }
+
 }
