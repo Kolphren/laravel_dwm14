@@ -35,6 +35,7 @@ class NavController extends Controller
     public function updateBook($id)
     {
         $book = Book::find($id);
-        return view('update', ['book' => $book]);
+        $authors = Author::all()->sortBy('name');
+        return view('update', ['book' => $book, 'authors' => $authors]);
     }
 }

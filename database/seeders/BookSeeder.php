@@ -20,7 +20,6 @@ class BookSeeder extends Seeder
                 'author_id' => 3,
                 'description' => 'Un monde trop bizarre',
                 'publication_year' => 2000,
-                'genre' => 'Fantastique',
                 'pages_nb' => 400
             ],
             [
@@ -28,7 +27,6 @@ class BookSeeder extends Seeder
                 'author_id' => 1,
                 'description' => 'Un monde trop bizarre',
                 'publication_year' => '2000',
-                'genre' => 'Fantastique',
                 'pages_nb' => 400
             ],
             [
@@ -36,7 +34,6 @@ class BookSeeder extends Seeder
                 'author_id' => 2,
                 'description' => 'Un monde trop bizarre',
                 'publication_year' => 2000,
-                'genre' => 'Fantastique',
                 'pages_nb' => 400
             ],
         ]);

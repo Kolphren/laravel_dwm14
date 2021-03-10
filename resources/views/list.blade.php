@@ -24,7 +24,11 @@
                     <th scope="row">{{ $book->id }}</th>
                     <td><a href="/book/{{ $book->id }}">{{ $book->title }}</a></td>
                     <td>{{ $book->author->name }}</td>
-                    <td>{{ $book->genre }}</td>
+                    <td>
+                        @foreach($book->genres as $genre)
+                            <p>{{ $genre->name }}</p>
+                        @endforeach
+                    </td>
                     <td><a class="btn btn-info" href="/updateBook/{{ $book->id }}">U</a></td>
                     <td>
                         <form action="/deleteBook" method="POST">
