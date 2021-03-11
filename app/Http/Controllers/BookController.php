@@ -15,15 +15,18 @@ class BookController extends Controller
         $book->author_id = $request->author_id;
         $book->description = $request->description;
         $book->pages_nb = $request->pages_nb;
-        $book->genre = $request->genre;
         $book->publication_year = $request->publication_year;
         $book->save();
+        $book->genres()->attach($request->genres);
         return redirect('/list');
     }
 
     public static function delete(Request $request)
     {
-        Book::destroy($request->id);
+        $book = Book::find($request->id);
+        $book->genres()->detach();
+        $book->delete();
+        //Book::destroy($request->id);
         return redirect('/list');
     }
 
@@ -31,10 +34,10 @@ class BookController extends Controller
     {
         $book = Book::find($request->id);
         $book->title = $request->title;
-        $book->author = $request->author;
+        $book->author_id = $request->author_id;
         $book->description = $request->description;
         $book->pages_nb = $request->pages_nb;
-        $book->genre = $request->genre;
+        $book->genres()->sync($request->genres);
         $book->publication_year = $request->publication_year;
         $book->save();
         return redirect('/list');

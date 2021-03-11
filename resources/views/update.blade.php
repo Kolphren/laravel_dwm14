@@ -43,9 +43,14 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="genre" class="col-sm-4 col-form-label">Genre</label>
+                <label for="genres" class="col-sm-4 col-form-label">Genres</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" name="genre" value="{{ $book->genre }}">
+                    @foreach($genres as $genre)
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="genres[]" value="{{ $genre->id }}" id="">
+                            <label class="form-check-label" for="genres">{{ $genre->name }}</label>
+                        </div>
+                    @endforeach
                 </div>
             </div>
             <div class="form-group row">
